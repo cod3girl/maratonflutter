@@ -11,20 +11,29 @@ class LoginPage extends StatelessWidget {
       body: Stack(
         children: [
           Login(),
-          Align(
-            alignment: Alignment(-0.75, -0.5),
-            child: Lamp(
-              size: 45,
-              color: Colors.white,
+          TweenAnimationBuilder(
+              tween: Tween<double>(begin: 0, end: 1),
+              duration: const Duration(milliseconds: 1000),
+              builder: (context, double value, child) {
+                return Align(
+                    alignment: const Alignment(-0.75, -1),
+                    child: Opacity(
+                        opacity: value,
+                        child: const Lamp(size: 100, color: Colors.white70)));
+              },
             ),
-          ),
-          Align(
-            alignment: Alignment(-0.10, -0.7),
-            child: Lamp(
-              size: 45,
-              color: Colors.white,
+          TweenAnimationBuilder(
+              tween: Tween<double>(begin: 0, end: 1),
+              duration: const Duration(milliseconds: 1500),
+              builder: (context, double value, child) {
+                return Align(
+                    alignment: const Alignment(0, -1),
+                    child: Opacity(
+                        opacity: value,
+                        child: const Lamp(size: 70, color: Colors.white38)));
+              },
             ),
-          ),
+            
           Container(
             alignment: Alignment(0, -0.4),
             child: Text('Login',
