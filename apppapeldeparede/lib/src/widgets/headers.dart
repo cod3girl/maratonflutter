@@ -24,7 +24,6 @@ class _LoginPainter extends CustomPainter {
         );
     final Gradient gradiente = new LinearGradient(
         begin: Alignment.topCenter,
-        //end: Alignment.bottomCenter,
         colors: <Color>[
           Color(0xff5157CB),
           Color(0xff676CDB)

@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Headers',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.indigo,
+        primaryColor: Color(0xff5157CB),
       ),
       home: LoginPage(),
     );
